@@ -1,5 +1,16 @@
 import styled from 'styled-components'
 
+export const HeaderMenu = styled.header`
+  width: 100%;
+  top: 0;
+  position: fixed;
+
+  &.ativo {
+    background-color: #111;
+    transition: 0.2s;
+  }
+`
+
 export const NavContainer = styled.nav`
   max-width: 100rem;
   margin: 0 auto;
@@ -8,18 +19,30 @@ export const NavContainer = styled.nav`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  z-index: 100;
+
+  @media (max-width: 991px) {
+    padding: 20px 50px;
+    flex-direction: column;
+  }
 `
 
 export const Menu = styled.div`
   display: flex;
   gap: 3rem;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
   a {
     text-decoration: none;
     font-weight: 500;
     letter-spacing: 1px;
     transition: 0.3s;
+    font-size: 1rem;
   }
 
   a:hover {
@@ -29,6 +52,7 @@ export const Menu = styled.div`
   img {
     width: 92.5px;
     height: 25px;
+    margin-top: 10px;
   }
 
   ul {
@@ -45,15 +69,20 @@ export const Search = styled.div`
   height: 40px;
   position: relative;
 
+  @media (max-width: 991px) {
+    margin-top: 1.5rem;
+  }
+
   input {
     width: 100%;
     height: 100%;
-    padding: 0 10px 0 45px;
+    padding-left: 45px;
     color: #fff;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
     outline: none;
     border-radius: 4px;
+    backdrop-filter: blur(10px);
   }
 
   input::placeholder {
@@ -61,8 +90,7 @@ export const Search = styled.div`
   }
 
   .icone {
-    width: 17px;
-    height: 17px;
+    font-size: 1rem;
     position: absolute;
     top: 50%;
     left: 10px;
