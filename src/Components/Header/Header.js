@@ -1,11 +1,19 @@
 import React from 'react'
-import { Menu, NavContainer, Search } from './HeaderStyled'
+import { HeaderMenu, Menu, NavContainer, Search } from './HeaderStyled'
 import LogoImg from '../../../src/Assets/logo.png'
 import { FaSearch } from 'react-icons/fa'
 
 const Header = () => {
+  const menu = document.querySelector('#ativo')
+
+  function activeScroll() {
+    menu.classList.toggle('ativo', window.scrollY > 10)
+  }
+
+  window.addEventListener('scroll', activeScroll)
+
   return (
-    <>
+    <HeaderMenu id="ativo">
       <NavContainer>
         <Menu>
           <a href="/">
@@ -31,7 +39,7 @@ const Header = () => {
           <FaSearch className="icone" />
         </Search>
       </NavContainer>
-    </>
+    </HeaderMenu>
   )
 }
 
