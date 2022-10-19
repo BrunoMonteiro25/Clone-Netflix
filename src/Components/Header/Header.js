@@ -4,9 +4,8 @@ import LogoImg from '../../../src/Assets/logo.png'
 import { FaSearch } from 'react-icons/fa'
 
 const Header = () => {
-  const menu = document.querySelector('#ativo')
-
   function activeScroll() {
+    const menu = document.querySelector('#ativo')
     menu.classList.toggle('ativo', window.scrollY > 10)
   }
 

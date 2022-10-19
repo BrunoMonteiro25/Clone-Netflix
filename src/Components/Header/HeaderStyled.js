@@ -4,6 +4,7 @@ export const HeaderMenu = styled.header`
   width: 100%;
   top: 0;
   position: fixed;
+  z-index: 1000;
 
   &.ativo {
     background-color: #111;
@@ -43,6 +44,7 @@ export const Menu = styled.div`
     letter-spacing: 1px;
     transition: 0.3s;
     font-size: 1rem;
+    color: #eee;
   }
 
   a:hover {
