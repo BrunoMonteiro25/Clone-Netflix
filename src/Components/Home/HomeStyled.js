@@ -1,12 +1,75 @@
 import styled from 'styled-components'
 
+export const Banner = styled.div`
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`
+
+export const Details = styled.div`
+  position: absolute;
+  top: 21rem;
+  width: 100%;
+  z-index: 1;
+  padding: 2rem 0;
+
+  div {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    /* border: 1px solid white; */
+  }
+
+  h3 {
+    font-size: 2rem;
+    color: #eee;
+  }
+
+  p {
+    max-width: 500px;
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #eee;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    padding: 0.2rem 1.5rem 0.2rem 0.8rem;
+    margin-top: 20px;
+    border: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .icone {
+    font-size: 2.8rem;
+  }
+`
+
 export const Container = styled.div`
-  max-width: 80rem;
+  max-width: 100rem;
   margin: 0 auto;
+  padding: 0.5rem;
+  color: #eee;
 
   h1 {
-    text-align: center;
-    margin: 4rem 0;
+    margin: 4rem 2rem;
   }
 `
 
@@ -45,21 +108,8 @@ export const Movie = styled.li`
   }
 `
 
-export const Banner = styled.div`
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  padding: 0 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+export const Footer = styled.footer`
+  padding: 5rem 0 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
 `
