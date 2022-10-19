@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Banner = styled.div`
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 93vh;
 
   img {
     position: absolute;
@@ -51,7 +51,7 @@ export const Details = styled.div`
     padding: 0.2rem 1.5rem 0.2rem 0.8rem;
     margin-top: 20px;
     border: none;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.3rem;
     border-radius: 4px;
     cursor: pointer;
@@ -68,8 +68,10 @@ export const Container = styled.div`
   padding: 0.5rem;
   color: #eee;
 
-  h1 {
-    margin: 4rem 2rem;
+  h2 {
+    margin: 0 0 1rem 0;
+    padding: 0.3rem 1rem 2rem 1rem;
+    font-size: 1.3rem;
   }
 `
 
@@ -112,4 +114,5 @@ export const Footer = styled.footer`
   padding: 5rem 0 2rem 0;
   text-align: center;
   font-size: 0.9rem;
+  color: #eee;
 `
