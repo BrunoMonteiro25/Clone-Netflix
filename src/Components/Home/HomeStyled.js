@@ -17,7 +17,7 @@ export const Banner = styled.div`
 
 export const Details = styled.div`
   position: absolute;
-  top: 21rem;
+  top: 17rem;
   width: 100%;
   z-index: 1;
   padding: 2rem 0;
@@ -29,6 +29,25 @@ export const Details = styled.div`
     /* border: 1px solid white; */
   }
 
+  .filme {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .filme img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+
+  .filme p {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
   h3 {
     font-size: 2rem;
     color: #eee;
@@ -36,7 +55,7 @@ export const Details = styled.div`
 
   p {
     max-width: 500px;
-    margin: 1rem 0;
+    margin: 0.7rem 0;
     font-size: 1rem;
     line-height: 1.5;
     color: #eee;
