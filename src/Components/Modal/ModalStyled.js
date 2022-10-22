@@ -16,10 +16,14 @@ export const ModalDiv = styled.div`
 export const Container = styled.div`
   background-color: #111;
   color: #eee;
-  width: 500px;
-  height: 80%;
+  width: 600px;
+  height: max-content;
   border-radius: 8px;
   position: relative;
+  padding-bottom: 15px;
+
+  @media (max-width: 615px) {
+  }
 
   button {
     display: flex;
@@ -36,7 +40,7 @@ export const Container = styled.div`
     position: relative;
     margin-top: 20px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 100;
 
     &::before,
     &::after {
@@ -60,22 +64,24 @@ export const Container = styled.div`
 `
 
 export const Content = styled.div`
-  /* border: 2px solid white; */
+  display: flex;
+  gap: 30px;
 
-  img {
-    max-width: 500px;
+  iframe {
+    min-width: 600px;
     position: absolute;
     top: 0;
     left: 0;
   }
 
+  .info {
+    margin: 300px 0 10px 0;
+  }
+
   .details {
-    /* border: 1px solid white; */
-    margin: 250px 0 10px 0;
     font-size: 0.8rem;
     display: flex;
     align-items: center;
-    width: 250px;
   }
 
   .details p {
@@ -104,9 +110,33 @@ export const Content = styled.div`
   }
 
   p {
-    width: 300px;
+    width: 290px;
     font-size: 0.8rem;
     line-height: 1.3;
     margin: 0 0 10px 10px;
+  }
+
+  .info-gen {
+    width: max-content;
+    margin-top: 300px;
+  }
+
+  h4 {
+    display: inline;
+    font-size: 1rem;
+    color: #bbb;
+    font-weight: 400;
+  }
+
+  .info-gen p {
+    display: inline;
+    width: 200px;
+    letter-spacing: normal;
+    font-size: 0.8rem;
+    margin: 0px;
+  }
+
+  .genero {
+    margin: 15px 0;
   }
 `
