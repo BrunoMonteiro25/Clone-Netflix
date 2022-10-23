@@ -11,6 +11,7 @@ export const ModalDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: fixed;
 `
 
 export const Container = styled.div`
@@ -23,6 +24,7 @@ export const Container = styled.div`
   padding-bottom: 15px;
 
   @media (max-width: 615px) {
+    width: 350px;
   }
 
   button {
@@ -67,8 +69,35 @@ export const Content = styled.div`
   display: flex;
   gap: 30px;
 
+  @media (max-width: 615px) {
+    flex-direction: column;
+    gap: 10px;
+
+    iframe {
+      width: 350px !important;
+    }
+
+    .info {
+      margin: 280px 0 0 0 !important;
+    }
+
+    .info p {
+      width: 340px;
+    }
+
+    .sinopse {
+      padding-right: 15px;
+    }
+
+    .info-gen {
+      width: 350px !important;
+      margin: 0px !important;
+      padding: 0 10px;
+    }
+  }
+
   iframe {
-    min-width: 600px;
+    width: 600px;
     position: absolute;
     top: 0;
     left: 0;
