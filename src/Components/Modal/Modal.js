@@ -29,7 +29,7 @@ const Modal = ({ id = 'modal', onClose = () => {}, children }) => {
               <p className="hd">hd</p>
             </div>
             <h3>Vingadores: Ultimato</h3>
-            <p>
+            <p className="sinopse">
               Após Thanos eliminar metade das criaturas vivas, os Vingadores têm
               de lidar com a perda de amigos e entes queridos.
             </p>
