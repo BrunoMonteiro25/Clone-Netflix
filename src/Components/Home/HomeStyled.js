@@ -81,54 +81,6 @@ export const Details = styled.div`
   }
 `
 
-export const Container = styled.div`
-  max-width: 100rem;
-  margin: 0 auto;
-  padding: 0.5rem;
-  color: #eee;
-
-  h2 {
-    margin: 0 0 1rem 0;
-    padding: 0.3rem 1rem 2rem 1rem;
-    font-size: 1.3rem;
-  }
-`
-
-export const MovieList = styled.ul`
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  column-gap: 2rem;
-  row-gap: 4rem;
-`
-
-export const Movie = styled.li`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  img {
-    width: 180px;
-    border-radius: 1rem;
-    margin-bottom: 2rem;
-  }
-
-  span {
-    font-weight: bold;
-    font-size: 120%;
-    text-align: center;
-    line-height: 1.2;
-  }
-
-  a {
-    transition: all 0.3s;
-  }
-
-  a:hover {
-    transform: scale(1.1);
-  }
-`
-
 export const Footer = styled.footer`
   padding: 5rem 0 2rem 0;
   text-align: center;
