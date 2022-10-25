@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import Header from '../Header/Header'
-import { APIKey, APIBase } from '../../Config/api'
+import categories from '../../Config/api'
 import {
   Container,
   Movie,
@@ -16,18 +16,10 @@ import Logo from '../../../src/Assets/logo-n.png'
 import { BsFillPlayFill } from 'react-icons/bs'
 
 import Modal from '../Modal/Modal'
+import Slide from '../Slide/Slide'
 
 function Home() {
-  const [movies, setMovies] = useState([])
-  const image_path = 'https://image.tmdb.org/t/p/w500'
-
   const [isModalVisible, setIsModalVisible] = useState(false)
-
-  useEffect(() => {
-    fetch(`${APIBase}/movie/popular?api_key=${APIKey}&language=pt-BR&page=1`)
-      .then((response) => response.json())
-      .then((data) => setMovies(data.results))
-  }, [])
 
   return (
     <>
@@ -59,22 +51,15 @@ function Home() {
         <Modal onClose={() => setIsModalVisible(false)} />
       ) : null}
 
-      <Container>
-        <h2>Populares na Netflix</h2>
-        <MovieList>
-          {movies.map((movie) => {
-            return (
-              <Movie key={movie.id}>
-                <img
-                  src={`${image_path}${movie.poster_path}`}
-                  alt={movie.title}
-                />
-                <span>{movie.title}</span>
-              </Movie>
-            )
-          })}
-        </MovieList>
-      </Container>
+      {categories.map((category) => {
+        return (
+          <Slide
+            key={category.name}
+            title={category.title}
+            path={category.path}
+          />
+        )
+      })}
 
       <Footer>
         <p>
