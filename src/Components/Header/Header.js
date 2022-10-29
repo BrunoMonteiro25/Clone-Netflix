@@ -18,7 +18,7 @@ const Header = () => {
           <a href="/">
             <img src={LogoImg} alt="Netflix" />
           </a>
-          <ul>
+          {/* <ul>
             <li>
               <a href="#">Início</a>
             </li>
@@ -31,12 +31,12 @@ const Header = () => {
             <li>
               <a href="#">Programas de TV</a>
             </li>
-          </ul>
+          </ul> */}
         </Menu>
-        <Search>
+        {/* <Search>
           <input type="text" placeholder="Títulos, gente e gêneros" />
           <FaSearch className="icone" />
-        </Search>
+        </Search> */}
       </NavContainer>
     </HeaderMenu>
   )

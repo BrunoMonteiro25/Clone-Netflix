@@ -1,6 +1,5 @@
 import React from 'react'
 import { ModalDiv, Container, Content } from './ModalStyled'
-import BG from '../../../src/Assets/bg.jpg'
 
 const Modal = ({ id = 'modal', onClose = () => {}, children }) => {
   const handleOutsideClick = (e) => {
