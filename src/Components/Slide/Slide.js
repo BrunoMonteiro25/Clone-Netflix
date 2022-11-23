@@ -1,11 +1,15 @@
 import React from 'react'
+import { useState } from 'react'
 import { getMovies } from '../../Config/api'
 import ModalMovie from '../Modal/ModalMovie'
-import { SlideContainer } from './SlideStyled'
+import { SlideContainer, Image } from './SlideStyled'
+
+export const image_path = 'https://image.tmdb.org/t/p/w500'
 
 const Slide = ({ title, path }) => {
   const [movies, setMovies] = React.useState([])
-  const image_path = 'https://image.tmdb.org/t/p/w500'
+
+  const [movieSelected, setMovieSelected] = useState([])
 
   const [isModalVisible, setIsModalVisible] = React.useState(false)
 
@@ -17,10 +21,16 @@ const Slide = ({ title, path }) => {
       console.log('fetchMovies error: ', error)
     }
   }
-  console.log(movies)
+  // console.log(movies[1].original_name)
   React.useEffect(() => {
     fetchMovies(path)
   }, [path])
+
+  function handleDetails(movie) {
+    setIsModalVisible(true)
+    setMovieSelected(movie)
+    console.log(movie)
+  }
 
   return (
     <>
@@ -29,19 +39,25 @@ const Slide = ({ title, path }) => {
         <div className="movies">
           {movies?.map((movie) => {
             return (
-              <img
-                key={movie.id}
-                src={`${image_path}${movie.poster_path}`}
-                alt={movie.name}
-                onClick={() => setIsModalVisible(true)}
-              />
+              <>
+                <Image
+                  key={movie.id}
+                  src={`${image_path}${movie.poster_path}`}
+                  alt={movie.name}
+                  onClick={() => handleDetails(movie)}
+                />
+              </>
             )
           })}
         </div>
+        {/* {console.log(movies[1].overview)} */}
+        {isModalVisible ? (
+          <ModalMovie
+            onClose={() => setIsModalVisible(false)}
+            movieSelected={movieSelected}
+          />
+        ) : null}
       </SlideContainer>
-      {isModalVisible ? (
-        <ModalMovie onClose={() => setIsModalVisible(false)} />
-      ) : null}
     </>
   )
 }
