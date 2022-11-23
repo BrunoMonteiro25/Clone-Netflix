@@ -29,16 +29,15 @@ export const SlideContainer = styled.section`
     background-color: #555;
     border-radius: 20px;
   }
+`
 
-  .movies img {
-    /* border: 1px solid white; */
-    min-width: 300px !important;
-    object-fit: cover;
-    transition: transform 450ms;
-    cursor: pointer;
-  }
+export const Image = styled.img`
+  min-width: 300px !important;
+  object-fit: cover;
+  transition: transform 450ms;
+  cursor: pointer;
 
-  .movies img:hover {
+  &:hover {
     transform: scale(1.1);
   }
 `

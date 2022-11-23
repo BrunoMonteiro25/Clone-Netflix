@@ -103,6 +103,13 @@ export const Content = styled.div`
     left: 0;
   }
 
+  img {
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .info {
     margin: 300px 0 10px 0;
   }
