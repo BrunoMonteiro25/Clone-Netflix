@@ -94,10 +94,22 @@ export const Content = styled.div`
       margin: 0px !important;
       padding: 0 10px;
     }
+
+    img {
+      height: 48%;
+    }
   }
 
   iframe {
     width: 600px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  img {
+    max-width: 600px;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;

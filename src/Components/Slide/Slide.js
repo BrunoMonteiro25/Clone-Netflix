@@ -21,7 +21,7 @@ const Slide = ({ title, path }) => {
       console.log('fetchMovies error: ', error)
     }
   }
-  // console.log(movies[1].original_name)
+
   React.useEffect(() => {
     fetchMovies(path)
   }, [path])
@@ -50,7 +50,6 @@ const Slide = ({ title, path }) => {
             )
           })}
         </div>
-        {/* {console.log(movies[1].overview)} */}
         {isModalVisible ? (
           <ModalMovie
             onClose={() => setIsModalVisible(false)}
