@@ -1,4 +1,4 @@
-## Clone-Netflix
+## Clone da Netflix
 
 [Funcionalidades](#funcionalidades-checkered_flag) | [Tecnologias](#tecnologias-computer) | [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
