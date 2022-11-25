@@ -1,15 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Header from '../Header/Header'
 import categories from '../../Config/api'
-import {
-  Container,
-  Movie,
-  MovieList,
-  Banner,
-  Footer,
-  Details,
-} from './HomeStyled'
-// import { Link } from 'react-router-dom'
+import { Banner, Footer, Details } from './HomeStyled'
 import BG from '../../../src/Assets/bg.jpg'
 import Logo from '../../../src/Assets/logo-n.png'
 
