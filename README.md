@@ -4,7 +4,7 @@
 
 ### Descrição do Projeto :star:
 
-Projeto próprio clone da Netflix
+Projeto próprio clone da Netflix.
 
 ![clone-netflix](https://user-images.githubusercontent.com/98993736/204025139-e4b4df47-73c9-479f-9dbc-156db2e3b571.png)
 
